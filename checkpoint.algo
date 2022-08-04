@@ -1,0 +1,29 @@
+ALGORITHM determiner
+VAR
+i: entier
+x: entier
+nbr_caractere: entier
+nbr_voyelle : entier
+ch: STRING
+BEGIN
+    i=0
+x= long(ch)
+Répeter
+    Ecrire ("Donner votre chaine")
+    lire(ch)
+jusqu'a (long(ch)<>0)&(ch[long(ch)]=".")
+
+nbr_caractere=0
+nbr_voyelle=0
+voyelle=["O","I,"Y","E","A","u"]
+pour i de 0 à (long(ch))faire
+si (ch[i]=" ") alors
+nbr_caractere=nbr_caractere + 1
+fin si 
+si (ch[i] in Voyelle)alors
+nbr_voyelle= nbr_voyelle +1
+fin si 
+Ecrire(nbr_caractere)
+Ecrire(nbr_voyelle)
+
+END
