@@ -1,28 +1,34 @@
 ALGORITHM determiner
 VAR
+/*declaration des variables*/
 i: entier
 x: entier
 nbr_caractere: entier
 nbr_voyelle : entier
 ch: STRING
+
 BEGIN
     i=0
-x= long(ch)
+    x= long(ch)
+/*remplir une chaine de cractére non vide et qui termine par .*/
 Répeter
     Ecrire ("Donner votre chaine")
     lire(ch)
-jusqu'a (long(ch)<>0)&(ch[long(ch)]=".")
+jusqua (long(ch)<>0)&(ch[long(ch)]=".")
 
+/*calcul des nmbres de voyelles, des nombre de carcatéres */
 nbr_caractere=0
 nbr_voyelle=0
 voyelle=["O","I,"Y","E","A","u"]
 pour i de 0 à (long(ch))faire
-si (ch[i]=" ") alors
-nbr_caractere=nbr_caractere + 1
-fin si 
-si (ch[i] in Voyelle)alors
-nbr_voyelle= nbr_voyelle +1
-fin si 
+    si (ch[i]=" ") alors
+        nbr_caractere=nbr_caractere + 1
+    fin si 
+    si (majus(ch[i]) in Voyelle)alors
+        nbr_voyelle= nbr_voyelle +1
+    fin si 
+fin pour
+/*affichage des resultats*/
 Ecrire(nbr_caractere)
 Ecrire(nbr_voyelle)
 
